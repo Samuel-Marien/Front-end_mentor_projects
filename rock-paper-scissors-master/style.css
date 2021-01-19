@@ -7,6 +7,7 @@
 html {
     background: black;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    --var-color-rad-blue: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
 }
 
 body {
@@ -68,14 +69,88 @@ body {
 }
 
 .container__board {
-    border: 1px solid wheat;
+    /* border: 1px solid wheat; */
+    background: url("/images/bg-triangle.svg") no-repeat center;
     width: 80vmin;
     height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 120px 0 120px;
+}
+
+.container__board__circle {
+    width: 190px;
+    height: 190px;
+    border-radius: 95px;
+    margin: 0 40px 0 40px;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-blue {
+    border: 25px solid rgb(27, 27, 221);
+    box-shadow: 6px 6px 2px rgb(224, 192, 132) inset, 6px 6px rgb(2, 2, 161), 0 0 30px hsl(237, 49%, 15%);
+}
+
+.circle-yellow {
+    border: 25px solid rgb(235, 150, 53);
+    box-shadow: 6px 6px 2px rgb(224, 192, 132) inset, 6px 6px rgb(204, 111, 5), 0 0 30px hsl(237, 49%, 15%);
+    ;
+}
+
+.circle-red {
+    border: 25px solid rgb(253, 77, 65);
+    box-shadow: 6px 6px 2px rgb(224, 192, 132) inset, 6px 6px rgb(168, 1, 1), 0 0 30px hsl(237, 49%, 15%);
+    ;
+}
+
+.icon {
+    width: 60px;
+}
+
+.container__board__circle:hover {
+    background-color: rgb(224, 192, 132);
+    box-shadow: 3px 3px 2px rgb(168, 138, 83) inset, 0 0 10px hsl(237, 49%, 15%);
+    transition: .5s;
+}
+
+.container__board__circle:hover .icon {
+    transform: scale(.9);
+    transition: .5s;
 }
 
 .container__rules {
     align-self: flex-end;
     margin-right: 30px;
+}
+
+.rules {
+    width: 130px;
+    height: 45px;
+    border-radius: 5px;
+    background: transparent;
+    border: 2px solid hsla(217, 16%, 45%, 0.39);
+    text-transform: uppercase;
+}
+
+.rules a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.rules:hover {
+    background: white;
+    transition: .5s;
+}
+
+.rules a:hover {
+    color: hsl(237, 49%, 15%);
+    transition: .3s;
 }
 
 .attribution {
