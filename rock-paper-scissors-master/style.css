@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 html {
@@ -14,7 +15,7 @@ body {
     background: black;
 }
 
-.container {
+.container-block {
     background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%)) no-repeat;
     margin: 25px 120px 0 120px;
     height: 90vmin;
@@ -37,10 +38,7 @@ body {
 }
 
 .container__scores__left-side {
-    /* border: 1px solid wheat; */
     color: white;
-    line-height: 160%;
-    font-size: 1.3rem;
     text-transform: uppercase;
 }
 
@@ -50,10 +48,8 @@ body {
     height: 110px;
     width: 150px;
     border-radius: 10px;
-    /* text-align: center; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -70,7 +66,7 @@ body {
 
 .container__board {
     /* border: 1px solid wheat; */
-    background: url("/images/bg-triangle.svg") no-repeat center;
+    background: url("./images/bg-triangle.svg") no-repeat center;
     width: 80vmin;
     height: 450px;
     display: flex;
@@ -135,22 +131,31 @@ body {
     background: transparent;
     border: 2px solid hsla(217, 16%, 45%, 0.39);
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .rules a {
     color: white;
     text-decoration: none;
+    font-weight: 600;
     font-size: 1.1rem;
+    transition: .9s;
 }
 
 .rules:hover {
     background: white;
+    opacity: .5;
     transition: .5s;
 }
 
-.rules a:hover {
+.rules:hover a {
     color: hsl(237, 49%, 15%);
-    transition: .3s;
+    transition: .9s;
+}
+
+.modal-title {
+    text-transform: uppercase;
+    color: hsl(229, 25%, 31%);
 }
 
 .attribution {
