@@ -1,6 +1,3 @@
-//first try :
-// paper:1, scissor:2, rock:3
-
 function homeChoice() {
     return Math.floor(Math.random() * 3) + 1;
 }
