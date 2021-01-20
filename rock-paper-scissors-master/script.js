@@ -5,6 +5,7 @@ function homeChoice() {
     return Math.floor(Math.random() * 3) + 1;
 }
 const userChoice = Math.floor(Math.random() * 3) + 1;
+// const homeChoice = Math.floor(Math.random() * 3) + 1;
 
 switch (userChoice) {
     case 1: //user choose paper
