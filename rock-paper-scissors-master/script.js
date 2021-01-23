@@ -1,12 +1,3 @@
-let userChoice = document.querySelectorAll('.container__board div');
-
-function userChoiceTranslated(choice) {
-    for (let i = 0; i < choice.length; i++) {
-        choice[i].addEventListener('click', () => {})
-        return i + 1;
-    }
-}
-
 function homeChoice() {
     return Math.floor(Math.random() * 3) + 1;
 }
@@ -52,16 +43,22 @@ function compareChoice(choiceNumber) {
             break;
         default:
             console.log("ERROR");
-            break;
     }
 }
 
-// userChoiceTranslated(userChoice)
-// console.log(userChoiceTranslated(userChoice))
-// const test = userChoiceTranslated(userChoice);
-// console.log(test);
-// compareChoice(test)
+let paper = document.querySelectorAll('.icon')[0];
+let scissors = document.querySelectorAll('.icon')[1];
+let rock = document.querySelectorAll('.icon')[2];
 
-userChoice.addEventListener('click', () => {
-
+paper.addEventListener('click', () => {
+    const userChoice = 1;
+    compareChoice(userChoice)
+})
+scissors.addEventListener('click', () => {
+    const userChoice = 2;
+    compareChoice(userChoice)
+})
+rock.addEventListener('click', () => {
+    const userChoice = 3;
+    compareChoice(userChoice)
 })
