@@ -64,7 +64,7 @@ body {
     color: hsl(229, 25%, 31%);
 }
 
-.container__board {
+.container__board__step-1 {
     /* border: 1px solid wheat; */
     background: url("./images/bg-triangle.svg") no-repeat center;
     width: 80vmin;
@@ -95,13 +95,11 @@ body {
 .circle-yellow {
     border: 25px solid rgb(235, 150, 53);
     box-shadow: 6px 6px 2px rgb(224, 192, 132) inset, 6px 6px rgb(204, 111, 5), 0 0 30px hsl(237, 49%, 15%);
-    ;
 }
 
 .circle-red {
     border: 25px solid rgb(253, 77, 65);
     box-shadow: 6px 6px 2px rgb(224, 192, 132) inset, 6px 6px rgb(168, 1, 1), 0 0 30px hsl(237, 49%, 15%);
-    ;
 }
 
 .icon {

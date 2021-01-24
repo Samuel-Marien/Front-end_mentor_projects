@@ -1,0 +1,62 @@
+.container__board__step-2 {
+    /* border: 1px solid wheat; */
+    width: 80vmin;
+    height: 450px;
+}
+
+.container__board__step-2__block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.h3 {
+    text-transform: uppercase;
+}
+
+.container__user,
+.container__home {
+    /* border: 1px solid wheat; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.container__user__picked {
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    background-color: wheat;
+}
+
+.container__user__picked__choice,
+.container__home__picked__choice {
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-blue2 {
+    border: 25px solid rgb(27, 27, 221);
+    box-shadow: 6px 6px 2px rgb(224, 192, 132) inset, 6px 6px rgb(2, 2, 161), 0 0 30px hsl(237, 49%, 15%);
+}
+
+.circle-yellow2 {
+    border: 25px solid rgb(235, 150, 53);
+    box-shadow: 6px 6px 2px rgb(224, 192, 132) inset, 6px 6px rgb(204, 111, 5), 0 0 30px hsl(237, 49%, 15%);
+}
+
+.circle-red2 {
+    border: 25px solid rgb(253, 77, 65);
+    box-shadow: 6px 6px 2px rgb(224, 192, 132) inset, 6px 6px rgb(168, 1, 1), 0 0 30px hsl(237, 49%, 15%);
+}
+
+.icon2 {
+    width: 100px;
+    border: 1px solid wheat;
+}

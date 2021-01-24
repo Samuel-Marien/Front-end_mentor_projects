@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_step2.css">
 
 </head>
 
@@ -35,17 +36,57 @@
                 </div>
                 <div class="container__scores__right-side__score__result">
                     <h2 class="result">
-                        12
+                        00
                     </h2>
                 </div>
 
             </div>
         </div>
-        <div class="container__board">
+        <div class="container__board__step-1">
             <div class="container__board__circle circle-blue"><img src="images/icon-paper.svg" alt="icon paper" class="icon paper"></div>
             <div class="container__board__circle circle-yellow"><img src="images/icon-scissors.svg" alt="icon scissors" class="icon scissors"></div>
             <div class="container__board__circle circle-red"><img src="images/icon-rock.svg" alt="icon rock" class="icon rock"></div>
         </div>
+
+        <div class="container__board__step-2">
+            <div class="container__board__step-2__block">
+                <div class="container__user">
+                    <div class="h3 my-5">
+                        <h3 class="text-white">You picked</h3>
+                    </div>
+                    <div class="container__user__picked">
+                        <div class="paper__choice">
+                            <div class="container__user__picked__choice circle-blue2"><img src="images/icon-paper.svg" alt="icon paper" class="icon2 icon-paper2"></div>
+                        </div>
+                        <div class="scissors__choice">
+                            <div class="container__user__picked__choice circle-yellow2"><img src="images/icon-scissors.svg" alt="icon scissors" class="icon2 icon-scissors2"></div>
+                        </div>
+                        <div class="rock__choice">
+                            <div class="container__user__picked__choice circle-red2"><img src="images/icon-rock.svg" alt="icon rock" class="icon2 icon-rock2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container__home">
+                    <div class="h3 my-5">
+                        <h3 class="text-white">The house picked</h3>
+                    </div>
+                    <div class="container__home__picked">
+                        <div class="paper__home__choice">
+                            <div class="container__home__picked__choice circle-blue2"><img src="images/icon-paper.svg" alt="icon paper" class="icon2 icon-paper2"></div>
+                        </div>
+                        <div class="scissors__home__choice">
+                            <div class="container__home__picked__choice circle-yellow2"><img src="images/icon-scissors.svg" alt="icon scissors" class="icon2 icon-scissors2"></div>
+                        </div>
+                        <div class="rock__home__choice">
+                            <div class="container__home__picked__choice circle-red2"><img src="images/icon-rock.svg" alt="icon rock" class="icon2 icon-rock2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
         <div class="container__rules">
             <button class="rules" data-bs-toggle="modal" data-bs-target="#loadRules">
                 <a href="#">Rules</a>
