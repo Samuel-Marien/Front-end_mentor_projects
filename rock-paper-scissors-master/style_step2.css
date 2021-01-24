@@ -7,9 +7,12 @@
 .container__board__step-2__block {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.h3 {
+.h3,
+.h1,
+button {
     text-transform: uppercase;
 }
 
@@ -59,4 +62,9 @@
 .icon2 {
     width: 100px;
     border: 1px solid wheat;
+}
+
+.container__board__step-2__block__result {
+    /* border: 1px solid wheat; */
+    width: 180px;
 }

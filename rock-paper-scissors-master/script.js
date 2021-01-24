@@ -10,6 +10,9 @@ let pickedRock = document.querySelector('.rock__choice');
 let homePickedPaper = document.querySelector('.paper__home__choice');
 let homePickedScissors = document.querySelector('.scissors__home__choice');
 let homePickedRock = document.querySelector('.rock__home__choice');
+let winResult = document.querySelector('.container__board__step-2__block__result__win');
+let looseResult = document.querySelector('.container__board__step-2__block__result__loose');
+let equalResult = document.querySelector('.container__board__step-2__block__result__equal');
 let numberHomeChoice = 0;
 
 
@@ -27,14 +30,12 @@ paper.addEventListener('click', () => {
     pickedPaper.style.display = "block";
     pickedScissors.style.display = "none";
     pickedRock.style.display = "none";
-
-
-
 })
 
 scissors.addEventListener('click', () => {
     const userChoice = 2;
     compareChoice(userChoice);
+    translatedHomeChoice(numberHomeChoice);
 
     containerStep1.style.display = "none";
     containerStep2.style.display = "block";
@@ -42,9 +43,11 @@ scissors.addEventListener('click', () => {
     pickedScissors.style.display = "block";
     pickedRock.style.display = "none";
 })
+
 rock.addEventListener('click', () => {
     const userChoice = 3;
     compareChoice(userChoice);
+    translatedHomeChoice(numberHomeChoice);
 
     containerStep1.style.display = "none";
     containerStep2.style.display = "block";
@@ -64,38 +67,56 @@ function compareChoice(choiceNumber) {
     switch (choiceNumber) {
         case 1: //user choose paper
             if (homeChoice() === 3) {
-                console.log("user take paper, home take rock \nuser win");
                 numberHomeChoice = 3;
+                winResult.style.display = "block"
+                looseResult.style.display = "none"
+                equalResult.style.display = "none"
             } else if (homeChoice() === 2) {
-                console.log("user take paper, home take scissor \nuser loose");
                 numberHomeChoice = 2;
+                winResult.style.display = "none"
+                looseResult.style.display = "block"
+                equalResult.style.display = "none"
             } else {
-                console.log("user take paper, home take paper...\nequality");
                 numberHomeChoice = 1;
+                winResult.style.display = "none"
+                looseResult.style.display = "none"
+                equalResult.style.display = "block"
             }
             break;
         case 2: //user choose scissor
             if (homeChoice() === 3) {
-                console.log("user take scissor, home take rock \n user looze");
                 numberHomeChoice = 3;
+                winResult.style.display = "none"
+                looseResult.style.display = "block"
+                equalResult.style.display = "none"
             } else if (homeChoice() === 2) {
-                console.log("user take scissor, home take scissor...\nequality");
                 numberHomeChoice = 2;
+                winResult.style.display = "none"
+                looseResult.style.display = "none"
+                equalResult.style.display = "block"
             } else {
-                console.log("user take scissor, home take paper \nuser win");
                 numberHomeChoice = 1;
+                winResult.style.display = "block"
+                looseResult.style.display = "none"
+                equalResult.style.display = "none"
             }
             break;
         case 3: //user choose rock
             if (homeChoice() === 3) {
-                console.log("user take rock, home take rock...\equality");
                 numberHomeChoice = 3;
+                winResult.style.display = "none"
+                looseResult.style.display = "none"
+                equalResult.style.display = "block"
             } else if (homeChoice() === 2) {
-                console.log("user take rock, home take scissor\nuser win");
                 numberHomeChoice = 2;
+                winResult.style.display = "block"
+                looseResult.style.display = "none"
+                equalResult.style.display = "none"
             } else {
-                console.log("user take rock, home take paper\n user loose");
                 numberHomeChoice = 1;
+                winResult.style.display = "none"
+                looseResult.style.display = "block"
+                equalResult.style.display = "none"
             }
             break;
         default:
