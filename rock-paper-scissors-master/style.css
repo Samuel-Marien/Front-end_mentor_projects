@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
 }
 
 html {
@@ -163,4 +164,9 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+.test {
+    box-shadow: 0 0 100px white;
+    border: none;
 }

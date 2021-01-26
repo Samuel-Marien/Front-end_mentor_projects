@@ -13,7 +13,11 @@ let homePickedRock = document.querySelector('.rock__home__choice');
 let winResult = document.querySelector('.container__board__step-2__block__result__win');
 let looseResult = document.querySelector('.container__board__step-2__block__result__loose');
 let equalResult = document.querySelector('.container__board__step-2__block__result__equal');
+let button = document.querySelector('button');
+let userScore = document.querySelector('.result');
 let numberHomeChoice = 0;
+
+
 
 
 // Main :
@@ -27,6 +31,7 @@ paper.addEventListener('click', () => {
 
     containerStep1.style.display = "none";
     containerStep2.style.display = "block";
+
     pickedPaper.style.display = "block";
     pickedScissors.style.display = "none";
     pickedRock.style.display = "none";
@@ -39,6 +44,7 @@ scissors.addEventListener('click', () => {
 
     containerStep1.style.display = "none";
     containerStep2.style.display = "block";
+
     pickedPaper.style.display = "none";
     pickedScissors.style.display = "block";
     pickedRock.style.display = "none";
@@ -51,9 +57,16 @@ rock.addEventListener('click', () => {
 
     containerStep1.style.display = "none";
     containerStep2.style.display = "block";
+
     pickedPaper.style.display = "none";
     pickedScissors.style.display = "none";
     pickedRock.style.display = "block";
+})
+
+button.addEventListener('click', () => {
+    containerStep1.style.display = "flex";
+    containerStep2.style.display = "none";
+    // pickedPaper.classList.remove('test');
 })
 
 // Functions :
@@ -68,55 +81,65 @@ function compareChoice(choiceNumber) {
         case 1: //user choose paper
             if (homeChoice() === 3) {
                 numberHomeChoice = 3;
-                winResult.style.display = "block"
-                looseResult.style.display = "none"
-                equalResult.style.display = "none"
+                winResult.style.display = "block";
+                looseResult.style.display = "none";
+                equalResult.style.display = "none";
+                userScore.innerHTML++
+                    // pickedPaper.classList.add('test')
             } else if (homeChoice() === 2) {
                 numberHomeChoice = 2;
-                winResult.style.display = "none"
-                looseResult.style.display = "block"
-                equalResult.style.display = "none"
+                winResult.style.display = "none";
+                looseResult.style.display = "block";
+                equalResult.style.display = "none";
+                userScore.innerHTML--
             } else {
                 numberHomeChoice = 1;
-                winResult.style.display = "none"
-                looseResult.style.display = "none"
-                equalResult.style.display = "block"
+                winResult.style.display = "none";
+                looseResult.style.display = "none";
+                equalResult.style.display = "block";
             }
             break;
-        case 2: //user choose scissor
+        case 2: //user choose scissors
             if (homeChoice() === 3) {
                 numberHomeChoice = 3;
-                winResult.style.display = "none"
-                looseResult.style.display = "block"
-                equalResult.style.display = "none"
+                winResult.style.display = "none";
+                looseResult.style.display = "block";
+                equalResult.style.display = "none";
+                userScore.innerHTML--
+
             } else if (homeChoice() === 2) {
                 numberHomeChoice = 2;
-                winResult.style.display = "none"
-                looseResult.style.display = "none"
-                equalResult.style.display = "block"
+                winResult.style.display = "none";
+                looseResult.style.display = "none";
+                equalResult.style.display = "block";
             } else {
                 numberHomeChoice = 1;
-                winResult.style.display = "block"
-                looseResult.style.display = "none"
-                equalResult.style.display = "none"
+                winResult.style.display = "block";
+                looseResult.style.display = "none";
+                equalResult.style.display = "none";
+                userScore.innerHTML++
             }
             break;
         case 3: //user choose rock
             if (homeChoice() === 3) {
                 numberHomeChoice = 3;
-                winResult.style.display = "none"
-                looseResult.style.display = "none"
-                equalResult.style.display = "block"
+                winResult.style.display = "none";
+                looseResult.style.display = "none";
+                equalResult.style.display = "block";
+
             } else if (homeChoice() === 2) {
                 numberHomeChoice = 2;
-                winResult.style.display = "block"
-                looseResult.style.display = "none"
-                equalResult.style.display = "none"
+                winResult.style.display = "block";
+                looseResult.style.display = "none";
+                equalResult.style.display = "none";
+                userScore.innerHTML++
+
             } else {
                 numberHomeChoice = 1;
-                winResult.style.display = "none"
-                looseResult.style.display = "block"
-                equalResult.style.display = "none"
+                winResult.style.display = "none";
+                looseResult.style.display = "block";
+                equalResult.style.display = "none";
+                userScore.innerHTML--
             }
             break;
         default:

@@ -10,12 +10,6 @@
     align-items: center;
 }
 
-.h3,
-.h1,
-button {
-    text-transform: uppercase;
-}
-
 .container__user,
 .container__home {
     /* border: 1px solid wheat; */
