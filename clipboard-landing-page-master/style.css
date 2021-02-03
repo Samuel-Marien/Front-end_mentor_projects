@@ -1,0 +1,362 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1200px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    margin: auto;
+    --primary-color-cyan: hsl(171, 66%, 44%);
+    --primary-color-dark-cyan: hsl(175, 73%, 29%);
+    --primary-color-blue: hsl(233, 100%, 69%);
+    --primary-color-dark-blue: hsl(219, 52%, 39%);
+    --neutral-color-gray: hsl(210, 10%, 33%);
+    --neutral-color-blue: hsl(201, 11%, 66%);
+}
+
+
+/* Header below */
+
+header {
+    height: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--neutral-color-gray);
+    background: url('images/bg-header-desktop.png');
+    background-repeat: no-repeat;
+}
+
+header img {
+    width: 100px;
+    margin-top: 50px;
+}
+
+.header-text {
+    margin-top: 50px;
+    height: 150px;
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+header h1 {
+    font-weight: 600;
+}
+
+header p {
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--neutral-color-blue);
+}
+
+button {
+    cursor: pointer;
+}
+
+.header-button {
+    display: flex;
+    justify-content: space-between;
+    width: 360px;
+}
+
+.button-ios,
+.button-mac {
+    width: 165px;
+    height: 35px;
+    border-radius: 25px;
+    color: white;
+    box-shadow: 0 0 10px var(--neutral-color-blue);
+    border: none;
+}
+
+.button-ios {
+    background: var(--primary-color-cyan);
+    border-bottom: 2px solid var(--primary-color-dark-cyan);
+}
+
+.button-mac {
+    background: var(--primary-color-blue);
+    border-bottom: 2px solid var(--primary-color-dark-blue);
+}
+
+
+/* Main below*/
+
+.prolog {
+    width: 580px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.prolog h1 {
+    font-weight: 600;
+    color: var(--neutral-color-gray);
+    margin-bottom: 20px;
+}
+
+.prolog p,
+.main-content-top-text p {
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--neutral-color-blue);
+}
+
+.main-content {
+    margin-top: 100px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content-top img {
+    width: 600px;
+}
+
+.main-content-top-text {
+    width: 600px;
+    padding: 0 100px;
+    line-height: 30px;
+}
+
+.main-content-top-text h3 {
+    margin-top: 30px;
+}
+
+.main-content-top-text p {
+    width: 350px;
+}
+
+.main-content-middle {
+    display: flex;
+    justify-content: center;
+}
+
+.prolog-workflow {
+    margin-top: 20px
+}
+
+.features {
+    margin: 100px auto;
+    width: 1200px;
+    display: flex;
+    text-align: center;
+}
+
+.features-items {
+    margin: 0 auto;
+    width: 300px;
+}
+
+.features-items h4 {
+    font-weight: 600;
+    margin-top: 30px;
+    color: var(--neutral-color-gray);
+}
+
+.features-items p {
+    margin-top: 30px;
+    color: var(--neutral-color-blue);
+}
+
+.partners {
+    margin: 200px auto;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.partners img {
+    width: 180px;
+}
+
+.button-ios-bottom,
+.button-mac-bottom {
+    width: 165px;
+    margin-top: 50px;
+}
+
+.button-mac-bottom {
+    margin-left: 30px;
+}
+
+
+/* Footer below */
+
+footer {
+    margin-top: 100px;
+    width: 1200px;
+    background: var(--neutral-color-blue);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 460px;
+    height: 55px;
+    color: var(--neutral-color-gray);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--neutral-color-gray);
+}
+
+.footer-text h5 {
+    padding-left: 83px;
+}
+
+.footer-logos {
+    display: flex;
+    margin-left: 230px;
+}
+
+.footer-logos img {
+    width: 20px;
+    height: auto;
+    margin-left: 30px;
+}
+
+
+/* MObile screen iphone 6/7/8 screen <= 375px */
+
+@media all and (max-width:375px) {
+    /* Header */
+    body {
+        width: 375px;
+        /* text-align: center; */
+    }
+    header {
+        width: 375px;
+        height: 600px;
+        justify-content: space-between;
+    }
+    header img {
+        width: 125px;
+    }
+    .header-text {
+        width: 320px;
+    }
+    .header-button {
+        flex-direction: column;
+    }
+    .button-ios,
+    .button-mac {
+        width: 320px;
+        height: 55px;
+        font-size: 1.1rem;
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-weight: 600;
+    }
+    .button-mac {
+        margin-top: 20px;
+    }
+    /* Main */
+    .prolog {
+        padding-top: 60px;
+        width: 320px;
+    }
+    .main-content {
+        flex-direction: column;
+        width: 375px;
+    }
+    .main-content-top img {
+        width: 320px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .main-content-top-text,
+    .main-content-top-text p {
+        width: 320px;
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .main-content-top-text {
+        padding-top: 50px;
+        color: var(--neutral-color-gray);
+    }
+    .main-content-middle {
+        width: 375px;
+    }
+    .main-content-middle img {
+        width: 320px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    /* Features */
+    .features {
+        margin: 0;
+        width: 375px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .features-items {
+        margin-top: 100px;
+    }
+    .features-items h4 {
+        font-size: 1.5rem;
+    }
+    /* Partners */
+    .partners {
+        margin: 0 auto;
+        margin-top: 150px;
+        width: 375px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 600px;
+    }
+    .partners img {
+        width: 150px;
+    }
+    .button-mac-bottom {
+        margin-left: 0;
+    }
+    /* Footer */
+    footer {
+        width: 375px;
+        height: 500px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .footer-text {
+        height: 300px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 1.3rem;
+    }
+    .footer-text h5 {
+        padding-left: 0;
+    }
+    .footer-logos {
+        display: flex;
+        margin-left: 0;
+        width: 150px;
+        justify-content: space-around;
+    }
+    .footer-logos img {
+        width: 30px;
+        margin-left: 0;
+    }
+}
