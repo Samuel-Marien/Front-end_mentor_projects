@@ -9,6 +9,18 @@ body {
     background: rgb(32, 28, 36);
 }
 
+main {
+    border: 1px solid black;
+}
+
+.main__itemsSelectedBar {
+    border-radius: 0 0 50px 50px;
+}
+
+.main__itemsSelectedBar__clear-button {
+    border-radius: 0 0 15px 0;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
