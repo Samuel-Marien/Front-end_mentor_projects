@@ -1,0 +1,23 @@
+* {
+    font-family: 'Spartan', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    width: 65%;
+    margin: 0 auto;
+    background: rgb(32, 28, 36);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(230, 11%, 11%);
+}
+
+img {
+    height: 300px;
+}
