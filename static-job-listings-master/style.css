@@ -6,11 +6,11 @@
 body {
     width: 65%;
     margin: 0 auto;
-    background: rgb(32, 28, 36);
+    background: hsl(180, 8%, 12%);
 }
 
-main {
-    border: 1px solid black;
+.imgCarousel {
+    height: 300px;
 }
 
 .main__itemsSelectedBar {
@@ -21,6 +21,27 @@ main {
     border-radius: 0 0 15px 0;
 }
 
+.main__joberList h5,
+.main__joberList p {
+    font-size: .8rem;
+}
+
+.jobCard {
+    border-left: 4px solid hsl(180, 14%, 20%);
+    border-radius: 10px 5px 5px 10px;
+}
+
+.role,
+.level,
+.languages {
+    height: 30px;
+    font-size: .6rem;
+}
+
+.main__joberList__skillsButtons {
+    border: 1px solid black;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -28,8 +49,4 @@ main {
 
 .attribution a {
     color: hsl(230, 11%, 11%);
-}
-
-img {
-    height: 300px;
 }
