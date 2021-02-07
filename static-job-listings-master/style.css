@@ -4,7 +4,7 @@
 }
 
 body {
-    width: 65%;
+    width: 90%;
     margin: 0 auto;
     background: hsl(180, 8%, 12%);
 }
@@ -21,9 +21,24 @@ body {
     border-radius: 0 0 15px 0;
 }
 
+.contact {
+    border-radius: 0 0 10px 0;
+}
+
 .main__joberList h5,
-.main__joberList p {
+.main__joberList p,
+.main__joberList span {
     font-size: .8rem;
+}
+
+.new {
+    background-color: var(--bs-info);
+    border-radius: 8px;
+}
+
+.featured {
+    background-color: var(--bs-dark);
+    border-radius: 8px;
 }
 
 .jobCard {
@@ -34,19 +49,15 @@ body {
 .role,
 .level,
 .languages {
-    height: 30px;
-    font-size: .6rem;
-}
-
-.main__joberList__skillsButtons {
-    border: 1px solid black;
+    border: 1px solid hsl(180, 14%, 20%);
 }
 
 .attribution {
     font-size: 11px;
     text-align: center;
+    color: hsl(227, 44%, 22%);
 }
 
 .attribution a {
-    color: hsl(230, 11%, 11%);
+    color: hsl(229, 13%, 34%);
 }
